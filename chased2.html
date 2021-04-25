@@ -1,0 +1,51 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+
+
+  <h2 id="locationTitle">A Bad Idea</h2>
+  
+  </head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="chasedThem.jpg"></img>
+
+			<div style="font-size:20px;" class="storyText">
+				<p id='changeMe'>
+					As you rise to your feet the bandits surround you laughing and taunting you. 
+					The arrow embedded in your chest broke off in your fall and your arm feels numb. 
+					A bandit prods you in the chest with the end of his sword and you feel a sharp sting. 
+					“Come on then hero!” he shouts at you
+					Things are not looking good. Do you…
+				</p>
+
+			</div>
+		
+    <ul class="optionsCont">
+      <li><a href="chaseEnding.html" >Try to fight them</a></li>
+      <li><a href="chaseEnding.html">Just give up</a></li>
+
+	  </div>
+	  				
+
+				
+	  </body>
+</html>
+
+ <script>
+		var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+
+	
+		fetchIcon(name);
+
+
+</script>

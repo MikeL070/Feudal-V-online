@@ -1,0 +1,72 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <link rel="stylesheet" href="font.css" type="text/css">
+  <link rel="stylesheet" href="genericPage.css">
+  <meta  charset="UTF -8" />
+  <script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+<script src="silverHpFunctions.js"></script>
+  <h2 id="locationTitle">Blacksmith</h2>
+  <script>
+
+
+</script>
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="blacksmith.jpg"></img>
+
+			<div class="storyText">
+				<p>The smith is working at his anvil shaping horseshoes. 
+				There is an array of knives, tools and metal shapes displayed around his shop. 
+				“What can I do for you?“ he asks. Hopefully you can obtain some weapons or 
+				armour to help in the coming fight. Will you…</p>
+				
+							</div>
+		
+    <ul class="optionsCont">
+      <li id="haggleChange1"><a href="#" onclick="reduceSilver(30, 'sword');">Buy a basic sword to replace your pitchfork(30 Silver)</a></li>
+      <li><a href="#" onclick="reduceSilver(50, 'armour');">Buy some armour to protect yourself(50 Silver)</a></li>
+	  <li><a href="village.html">Return to the village</a></li>
+      <li><a id="classChoice" href="#" onclick="haggle();">This is an option to do stuff</a></li>
+	  </div>
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name');
+	fetchIcon(name);
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	classChoice.style.color =colour;	
+	
+
+	
+	
+		if(name=='scribe')
+	{
+		document.getElementById('classChoice').innerHTML="Use your wit to try and haggle with him.";
+	}
+	else if(name=='knight')
+	{
+		document.getElementById('classChoice').innerHTML="Use your knowledge of weapons to barter with the smith.";
+	}
+	else
+	{
+		document.getElementById('classChoice').innerHTML="Threaten him with violence to reduce the price.";
+	}
+	
+	function haggle()
+	{
+		var deal=confirm('He reluctantly agrees to sell you armour for 40 silver instead');
+		
+		if(deal==true)
+		{
+			reduceSilver(40, 'armour');
+		}
+		
+	}
+</script>

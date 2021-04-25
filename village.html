@@ -1,0 +1,62 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <link rel="stylesheet" href="font.css" type="text/css">
+  <link rel="stylesheet" href="genericPage.css">
+  <script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+  <script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+ 
+  <h2 id="locationTitle">Village</h2>
+
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="village.jpg"></img>
+
+			<div class="storyText">
+				<p style="font-size:16px;">
+					As you approach the village you can hear the sounds of everyday life.
+					From your experience you know there is a blacksmith that works in the village 
+					providing goods and tools to local farmers and serfs, hopefully he may have some arms and armour. 
+					Also, there are some travelling hedge knights camped on the outskirts who may be able to improve 
+					your skill at arms, and a tavern where you could try and gain knowledge of the bandits.
+				</p>	
+				<p id='knowLocationText'style="font-size:18px;">
+					You know the bandits are camped somewhere in the forest. You could go searching for them or you could 
+					try to learn their precise location in the village
+				</p>
+
+			</div>
+		
+		<ul class="optionsCont">
+		<li><a href="blacksmith.html">Go to the blacksmith.</a></li>
+		<li><a href="knights.html">Inquire with the knights.</a></li>
+		<li><a href="tavern.html">Visit the tavern.</a></li>
+		<li><a id = "knowLocation" href="forestSearch.html" id="link">Go to the forest and try to find the bandit camp.</a></li>
+	</div> 
+    <script>
+	var knowledge = sessionStorage.getItem ('knowledge');
+	if(knowledge == 'yes')
+	{
+		document.getElementById('knowLocation').href="bandit1.html";
+		document.getElementById('knowLocation').innerHTML="Go directly to the bandit camp";
+		document.getElementById('knowLocationText').innerHTML="You have managed to learn exactly where the bandits are camped and head directly there when ready";
+	}
+	</script>	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+			
+	fetchIcon(name);
+
+		
+		
+
+</script>

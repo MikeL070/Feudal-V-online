@@ -1,0 +1,66 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <link rel="stylesheet" href="font.css" type="text/css">
+  <link rel="stylesheet" href="introStory.css">
+  <meta  charset="UTF -8" />
+  <script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+  <script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+
+
+  <h2 id="locationTitle">Tragedy</h2>
+
+</head>
+<body>
+
+	<div class="storyBox">
+						
+		<p class="storyText">
+			You stand in the ashes of your farmhouse. 
+			After a morning of toil in the fields you arrive home to find your home burned to the ground and your father gently swinging from a nearby tree, a rope around his neck. A small sign hung around his neck reading “CHEAT”.  Your wife lies nearby on the ground, motionless and bloody, a wide wet gash on her neck, slowly oozing blood, her still open eyes staring lifelessly at the sky.
+		</p>
+		<p class="storyText">BANDITS WORK.</p>
+		<p class="storyText">
+			Your father spoke of these bandits the previous night and how they accused him of cheating at dice at the tavern in town after he beat them.
+			How your wife became their second victim, you will never know.
+			Regardless, you gather up your savings of 100 silver coins and your pitchfork and load them on your horse, you know what you must do.
+			You must find these bandits and exact your REVENGE.
+
+		</p>
+
+			
+		
+    <ul class="optionsCont">
+      <li id="opt"><a href="village.html">Go to the village to prepare your revenge</a></li>
+      <li><a id="classChoice" href="chasedBandits.html">This is an option to do stuff</a></li>
+	  </div>
+  
+	<script>
+		var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+	
+		
+		fetchIcon(name);
+
+	if(name=='scribe')
+	{
+		document.getElementById('classChoice').innerHTML="You have figured out their their camp's location. Head there now.";
+		document.getElementById('classChoice').href="bandit1.html";
+	}
+	else if(name=='knight')
+	{
+		document.getElementById('classChoice').innerHTML="Chase them down and face them on horseback";
+	}
+	else
+	{
+		document.getElementById('classChoice').innerHTML="Chase them down and make them PAY!";
+	}
+	
+	</script>
+</body>
+</html>
+

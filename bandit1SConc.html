@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+
+	<h2 id="locationTitle">Outside The Bandit Lair</h2>
+</head>
+<body>
+
+		<div class="storyBox">
+			<img id="picture"img src="firstBandit.jpg"></img>
+
+			<div class="storyText">
+				<p id='changeThis'>
+					You cleverly remained undetected and drove your weapon into the back of the unsuspecting churl’s neck. 
+					He lets out a strained gurgle and spits blood which you enjoy probably more than is right and god fearing. 
+					With the first one dispatched you turn your attention to the two remaining brigands in the cottage. Will you…
+				</p>	
+			</div>
+				<ul class="optionsCont">
+					<li><a href="bandit2Scribe.html">Sneak in and attack</a></li>
+					<li><a href="bandit1Conclusion.html">Call them out, alerting them to your presence and fight them outside</a></li>
+					<li><a href="runAway.html">Run away</a></li>
+
+		</div>			
+
+				
+
+
+
+				
+<script>
+
+		var name= sessionStorage.getItem('name')
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+			
+		fetchIcon(name);
+		
+
+
+</script>
+

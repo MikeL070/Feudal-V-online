@@ -1,0 +1,96 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <link rel="stylesheet" href="font.css" type="text/css">
+  <link rel="stylesheet" href="genericPage.css">
+  <meta  charset="UTF -8" />
+<script language="JavaScript" type="text/javascript" src="test.js"></script>
+  <h2 id="locationTitle">Village</h2>
+  <script>
+
+
+</script>
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="village.jpg"></img>
+
+			<div class="storyText">
+				<p>
+					As you approach the village you can hear the sounds of everyday life.
+					From your experience you know there is a blacksmith that works in the village 
+					providing goods and tools to local farmers and serfs, hopefully he may have some arms and armour. 
+					Also, there are some travelling hedge knights camped on the outskirts who may be able to improve 
+					your skill at arms, and a tavern where you could try and gain knowledge of the bandits.
+				</p>
+
+			</div>
+		</div>
+    <ul class="optionsCont">
+      <li><a href="#">Go to the blacksmith.</a></li>
+      <li><a href="#">Inquire with the knights.</a></li>
+	  <li><a href="#">Visit the tavern.</a></li>
+	  <li><a href="#">Go to the forest and try to find the bandit camp..</a></li>
+      <li><a id="classChoice" href="#">This is an option to do stuff</a></li>
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+
+	if(name=='scribe')
+	{
+	locationTitle.style.color="#9ac470";
+	}
+	else if(name=='knight'){
+
+	locationTitle.style.color="#537ae9";
+	}
+	else{
+	locationTitle.style.color="#fe0000";
+	}
+
+
+		if(name=='scribe')
+	{
+
+	const img = document.createElement("img");
+	img.src = "scribeIcon.jpg";
+
+	document.body.appendChild(img);
+	img.setAttribute("id", "iconPic");
+	img.style.position = "absolute";
+	img.style.left = "130px";
+	img.style.top = "110px";
+	img.style.width = "150px";
+	img.style.height = "150px";
+
+	}
+	else if(name=='knight'){
+
+	const img = document.createElement("img");
+	img.src = "knightIcon.jpg";
+
+	document.body.appendChild(img);
+	img.setAttribute("id", "iconPic");
+	img.style.position = "absolute";
+	img.style.left = "130px";
+	img.style.top = "110px";
+	img.style.width = "150px";
+	img.style.height = "150px";
+	}
+	else{
+
+		const img = document.createElement("img");
+		img.src = "bruteIcon.jpg";
+
+	document.body.appendChild(img);
+	img.setAttribute("id", "iconPic");
+	img.style.position = "absolute";
+	img.style.left = "130px";
+	img.style.top = "110px";
+	img.style.width = "150px";
+	img.style.height = "150px";
+	}
+</script>

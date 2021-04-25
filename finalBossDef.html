@@ -1,0 +1,68 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">The Bandit Leader</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p id="story1">
+					He is angry and you think you can see what he’s trying to do. 
+					You try to defend but his powerful strike proves too much for you and 
+					his strike hits home and his blade is buried in your shoulder, strangely there is no pain, you feel light headed.
+				</p>
+				
+				<script>
+					var weaponStatus = sessionStorage.getItem('weapon');
+					var trainStatus = sessionStorage.getItem('training');
+					
+					if(weaponStatus=='yes' && trainStatus=='yes')
+					{
+						document.getElementById('story1').innerHTML="He is clumsy and too angry for his own good. You can read his intentions clearly and block his high swing with your sword. You side step away from his blade and cut deep into his leg with a downward swing. He screams in pain, slumps onto his knees and drops his sword. He is at your mercy. ";
+					}
+					else if(weaponStatus=='yes' && trainStatus=='no')
+					{
+						document.getElementById('story1').innerHTML="He is angry and you think you can see what he’s trying to do and block his high swing with your sword. It is such a powerful blow it manages to make light contact with your shoulder. However, you manage to counter attack and slice his leg open. He screams in pain, slumps onto his knees and drops his sword. He is at your mercy.";
+						setTimeout(reduceHp,3000,10);
+						setTimeout(deadCheck,4000,)
+					}
+					else
+					{
+						setTimeout(reduceHp,3000,50);
+						setTimeout(deadCheck,4000,)					
+					}
+				
+				
+				</script>
+				
+			</div>
+			<ul class="optionsCont">
+				<li><a href="finishIt.html" onclick='deadCheck();'>Finish Him</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+				
+				
+	</div>	
+	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	
+	
+	fetchIcon(name);
+	
+</script>	

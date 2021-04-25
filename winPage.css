@@ -1,0 +1,68 @@
+body
+  {
+    background-color: #4b4b4b;
+  }
+h2
+  {
+    font-family: 'MedievalSharp-Book';
+    font-size: 35px;
+    text-align: center;
+    background-image:;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+	color: gold;
+  }
+  a
+  {
+    color: white;
+  }
+
+.storyBox
+  {
+    
+    flex:flow;
+    margin:auto;
+    height: 600px;
+    width: 800px;
+    border-style: groove;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	
+  }
+
+#congrats
+{
+	font-family: 'MedievalSharp-Book';
+	font-size:40px;
+	text-decoration: underline;
+    text-shadow: 1px 1px black;
+	color: gold;
+	
+}	
+.storyText
+  {
+	margin-top:10px;	  
+  color: white ;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'MedievalSharp-Book';
+  font-size: 28px;
+  
+  
+  
+  
+  }
+  .optionsCont
+  {
+    
+    padding: 10px;
+    margin:10px;
+    font-family: 'MedievalSharp-Book';
+    font-size: 32px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+	justify-content: space-around;
+	margin-top:50px;
+  }

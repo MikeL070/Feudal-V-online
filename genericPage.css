@@ -1,0 +1,77 @@
+
+body
+  {
+    background-color: #4b4b4b;
+  }
+h2
+  {
+    font-family: 'MedievalSharp-Book';
+    font-size: 35px;
+    text-align: center;
+    background-image:;
+    text-decoration: underline;
+    text-shadow: 2px 2px black
+  }
+  a
+  {
+    color: white;
+  }
+  li
+  {
+	  color: white;
+  }
+
+.storyBox
+  {
+    display: flex;
+    flex-flow: column;
+    margin:auto;
+    height: 600px;
+    width: 800px;
+    border-style: double;
+	   
+}
+#picture
+  {
+    height: 410px;
+    width: 800px;
+    
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items:center;
+
+
+  }
+.storyText
+  {
+  color: white ;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'MedievalSharp-Book';
+  font-size: 22px;  
+  margin: auto;
+  align-items: center;
+
+  }
+ 
+.optionsCont
+  {
+    
+    padding: 10px;
+    margin:10px;
+    font-family: 'MedievalSharp-Book';
+    font-size: 25px;
+    display: flex;
+    flex-flow: column;
+    align-items: left;
+	margin-top:50px;
+  }
+
+#classChoice
+{
+    font-style: italic;
+}
+#classChoice2
+{
+    font-style: italic;	
+}

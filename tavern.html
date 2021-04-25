@@ -1,0 +1,82 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<meta  charset="UTF -8" />
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script src="silverHpFunctions.js"></script>
+	<h2 id="locationTitle">Tavern</h2>
+	<script>
+
+
+	</script>
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="tavern.jpg"></img>
+
+			<div class="storyText">
+				<p>As you enter the tavern you are greeted by a musty smell 
+				and an inn keep whose expression does not match his words. </p>
+				<p id='knowLocationText'>It is quite as it is only afternoon, 
+				hopefully someone here can tell you where the bandits are camped. Will you…</p>
+			<script>
+				if(name=='scribe')
+				{
+					document.getElementById('knowLocationText').innerHTML="As you cleverly already figured out where the bandits are camped, there is little here to aid you in your quest. You could…";
+				}	
+			</script>		
+				
+			</div>
+		
+    <ul class="optionsCont">
+      <li><a href="#"onclick="reduceSilver(30, 'knowledge');">Offer silver to any man who can tell you the information you seek(30 Silver)</a></li>
+   	  <li><a href="village.html">Return to the village</a></li>
+      <li><a id="classChoice" href="#" onclick="tavHaggle();">This is an option to do stuff</a></li>
+	  </div>
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		locationTitle.style.color = colour;
+		classChoice.style.color =colour;
+		
+		fetchIcon(name);
+
+
+		if(name=='scribe')
+	{
+		document.getElementById('classChoice').innerHTML="Buy an ale to fortify your courage.";
+	}
+	else if(name=='knight')
+	{
+		document.getElementById('classChoice').innerHTML="Appeal to their decency and ask for their help.";
+	}
+	else
+	{
+		document.getElementById('classChoice').innerHTML="Proclaim “I will smash this place up if you don’t tell me where to find the bandits who wronged me!”";
+	}
+	
+	function tavHaggle()
+	{
+		if(name=='scribe')
+		{
+			alert("You're not sure if this is heling and it's costing money");
+			reduceSilver(10, 'knowledge');
+		}
+		else if (name=='knight')
+		{
+			alert("The barman says\n 'Theres no bleeding hearts here son, you'll need a better incentive than that'")
+		}
+		else
+		{
+			alert("The barman says\n'Listen here you fat lump, there's plenty of us here and we aren't scared o you'")
+		}
+	}
+</script>

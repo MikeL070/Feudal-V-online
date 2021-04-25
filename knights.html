@@ -1,0 +1,109 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<meta  charset="UTF -8" />
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script src="silverHpFunctions.js"></script>
+
+  <h2 id="locationTitle">Travelling Knights</h2>
+
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="knightCamp.jpg"></img>
+
+			<div class="storyText">
+				<p>
+					There are some knights scattered around their makeshift camp. 
+					Some are well armed and armoured and look formidable warriors. 
+					Some of them are training and you can hear the clang of steel on steel. Will you…
+				</p>
+
+			</div>
+		
+    <ul class="optionsCont">
+      <li><a href="" onclick="reduceSilver(50, knights');">Offer to pay them to train you in sword-fighting(50 Silver)</a></li>
+      <li><a href="village.html">Return to the village.</a></li>
+	  <li><a id="classChoice" href="" onclick="knightHaggle();">This is an option to do stuff</a></li>
+	  <li><a id="classChoice2" href=""onclick="knightHaggle2();">Start crying</a></li>
+	  </div>
+    <script>
+	
+	</script>	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+		classChoice2.style.color = colour;
+	
+		fetchIcon(name);
+
+
+		if(name=='scribe')
+	{
+		document.getElementById('classChoice').innerHTML="Tell them your story and appeal to their sense of honour and chivalry to get them to aid you.";
+		document.getElementById('classChoice2').innerHTML="Start weeping and wailing to try to get them to help you";
+	}
+	else if(name=='knight')
+	{
+		document.getElementById('classChoice').innerHTML="Greet them as fellow knights of the realm and ask them for help.";
+		document.getElementById('classChoice2').innerHTML="Start weeping and wailing to try to get them to help you";
+	}
+	else
+	{
+		document.getElementById('classChoice').innerHTML="Start sparring with the knights already practising.";
+		document.getElementById('classChoice2').innerHTML="Bellow you will “SMASH THEM IF YOU DO NOT HELP ME!!”";
+	}
+	function knightHaggle()
+	{
+		if(name=='scribe')
+		{
+			var deal=confirm('They take pity on you and offer to train you for 40 silver instead');
+			if(deal==true)
+				{
+				reduceSilver(40, 'knights');
+				}
+		}
+		else if(name=='knight')
+		{
+			var deal=confirm("'Well met fellow knight'\n They offer to help in your training for 30 silver");
+			if(deal==true)
+				{
+				reduceSilver(30, 'knights');
+				}		
+		}
+		else
+		{
+			alert('You train with the knights but they see you as sport. You learn new techniques but take a few knocks in the process')
+			reduceSilver(0, 'knights');	
+			reduceHp(10);
+			
+		}
+	}
+	function knightHaggle2()
+	{
+		if(name=='scribe')
+		{
+			alert('They all just laugh at you and you feel like a fool')
+		}
+		else if(name=='knight')
+		{
+			alert('They all just laugh at you and you feel like a fool');		
+		}
+		else
+		{
+			alert('They are not amused or intimidated and they give you a bit of a seeing to. You give up with your pride and your ribs bruised')
+			reduceHp(10);
+		}
+	}
+</script>

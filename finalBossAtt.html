@@ -1,0 +1,46 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">The Bandit Leader</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p id="story1">
+					You decide to attack. With his sword held high and his body exposed 
+					you plunge your sword into his chest. However his strike hits home 
+					and his blade is buried in your shoulder, strangely there is no pain, 
+					you feel light headed. The leader slumps onto his knees and drops his sword.
+				</p>
+				
+				<script>
+					setTimeout(reduceHp,3000,50);
+					setTimeout(deadCheck,4000,)
+				</script>
+			</div>
+			<ul class="optionsCont">
+				<li><a href="finishIt.html"onclick='deadCheck();'>You dont know if you are alive or dead</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+</body>
+</html>				
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	
+	
+	fetchIcon(name);
+	
+</script>	
