@@ -1,0 +1,50 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">Face the Bandits</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div style="font-size:26px;"class="storyText">
+				<p>
+					You slowly approach the ruined cottage. You feel your heart beating in your chest. 
+					As you near the door you hear voices that suddenly stop. Have they heard your approach?
+					Will you...
+					
+				</p>
+			</div>
+			<ul class="optionsCont">
+					<li><a href="scribeCottage.html">Burst through the door and attack</a></li>
+					<li><a href="bandit2.html">Wait</a></li>
+					<li><a href="runAway.html">Run away</a></li>
+
+	</div>
+	
+</body>
+</html>
+
+<script>
+
+		var name= sessionStorage.getItem('name')
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+			
+		fetchIcon(name);
+		
+		if(name=='scribe')
+		{
+			document.getElementById('knowLocation').href="bandit1.html";
+			
+		}	
+
+</script>

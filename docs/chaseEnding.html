@@ -1,0 +1,49 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<meta  charset="UTF -8">
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script src="silverHpFunctions.js"></script>
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+
+  <h2 id="locationTitle">A Bad Idea</h2>
+  
+</head>
+<body>
+
+	<div class="storyBox">
+	<img id="picture"img src="chasedThem.jpg"></img>
+
+		<div style="font-size:26px;" class="storyText">
+			<p>
+				As you are injured, you can only swing wildly at the bandits. 
+				You miss, they laugh. You then feel an intense pain in your back 
+				as a spear is thrust into it. You fall to the ground.
+			</p>
+
+		</div>
+	</div>
+		<script>
+			setTimeout(reduceHp,2000,30);
+			setTimeout(deadCheck,3000);
+
+		</script>
+
+				
+</body>
+</html>
+
+ <script>
+		var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+
+	
+		fetchIcon(name);
+
+
+</script>

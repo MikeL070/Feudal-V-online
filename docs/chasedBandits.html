@@ -1,0 +1,59 @@
+
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<meta  charset="UTF -8" />
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script src="silverHpFunctions.js"></script>
+
+  <h2 id="locationTitle">The Pursuit</h2>
+
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="chasedThem.jpg"></img>
+
+			<div style="font-size:20px;" class="storyText">
+				<p>
+					You chase them on horseback and in your haste your horses footfalls alert them to your pursuit. 
+					As you are nearing the bandits, they turn to face you and one of them looses an arrow which 
+					strikes you directly in the chest, you feel pain shoot through your body and you come tumbling 
+					off your horse and hit ground hard. You now must decide to continue the fight or flee for your life. 
+					Wil you…
+				</p>
+				<script>
+					setTimeout(reduceHp,3000,30); 
+					deadCheck();
+					setTimeout(playOuch,3000,);
+
+	
+				</script>
+			</div>
+		
+    <ul class="optionsCont">
+      <li><a href="chased2.html">Try to fight them</a></li>
+      <li><a href="introStory.html">Flee back to your farmhouse</a></li>
+
+	  </div>
+  	
+</body>
+</html>
+
+
+
+ <script>
+		var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+
+	
+		fetchIcon(name);
+
+
+</script>	

@@ -1,0 +1,68 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">Attack the Bandits</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p id="story1">
+					You attack the first bandit, he parries. Eventually you manage to finish him off, but you are hurt in the process.
+				</p>
+				<script>
+					var weaponStatus = sessionStorage.getItem('weapon');
+					var trainStatus = sessionStorage.getItem('training');
+					
+					if(name=='scribe')
+					{
+						document.getElementById('story1').innerHTML="You throw a handful of dirt at the bandits. The leader turns his head away just in time but the other gets a face full of it and struggles to see. You attack and hack down the blinded bandit, but you are hurt in the process";
+						setTimeout(reduceHp,3000,20);
+						setTimeout(deadCheck,4000,);
+					}
+					
+					else if(weaponStatus=='no')
+					{
+						document.getElementById('story1').innerHTML="You attack the first bandit. Your pitchfork is a near useless weapon and you struggle to beat him. Eventually you manage to finish him off, but you have taken serious damage in the process.";
+						setTimeout(reduceHp,3000,30);
+						setTimeout(deadCheck,4000,);
+					}
+					else if(weaponStatus=='yes')
+					{
+						setTimeout(reduceHp,3000,20);
+						setTimeout(deadCheck,4000,);
+					}
+
+				</script>
+				
+				
+			</div>
+			<ul class="optionsCont">
+				<li><a href="finalBoss1.html">Face the bandit leader</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+			
+				
+	</div>	
+	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	
+	
+	fetchIcon(name);
+	
+</script>	

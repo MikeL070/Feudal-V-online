@@ -1,0 +1,76 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">Defend Against the Bandits</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p id="story1">
+					You wait for their attack, and it is not long in coming. One of them attacks you and you try to counter
+				</p>
+				<p id="story2">
+					You are not well equipped for armed comabt. You take some serious blows but you eventually manage to kill the brigand
+				</p>
+				<script>
+					
+
+					var weaponStatus = sessionStorage.getItem('weapon');
+					var trainStatus = sessionStorage.getItem('training');
+										
+					if(weaponStatus=='no' && trainStatus=='yes')
+					{
+						document.getElementById('story2').innerHTML="You do your best and manage to deflect some of the damage and eventually manage to kill the brigand, but you are hurt in the process";
+						setTimeout(reduceHp,3000,20);
+						setTimeout(deadCheck,4000,);
+					}
+					else if(weaponStatus=='yes' && trainStatus=='yes')
+					{
+						document.getElementById('story2').innerHTML="You have training and a weapon. You expertly deflect the brigand’s stroke and counter with an upward thrust through his chest.";
+					}
+					else if(weaponStatus=='yes' && trainStatus=='no')
+					{
+						document.getElementById('story2').innerHTML="Thanks to your sword you manage to deflect some of the damage and eventually manage to kill the brigand, but you are hurt in the process";
+						setTimeout(reduceHp,3000,20);
+						setTimeout(deadCheck,4000,);
+					}
+					else
+					{
+						setTimeout(reduceHp,3000,30);
+						setTimeout(deadCheck,4000,);
+					}
+
+				</script>
+				
+				
+			</div>
+			<ul class="optionsCont">
+				<li><a href="finalBoss1.html">Face the bandit Leader</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+				
+				
+	</div>	
+	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	
+	
+	fetchIcon(name);
+	
+</script>	

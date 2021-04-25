@@ -1,0 +1,67 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+
+	<h2 id="locationTitle">Outside The Bandit Lair</h2>
+</head>
+<body>
+
+		<div class="storyBox">
+			<img id="picture"img src="firstBandit.jpg"></img>
+
+			<div class="storyText">
+				<p style="font-size:20px;">
+					You are just outside the bandit's lair. It was once a cottage and outbuildings, now just decrepit ruins.
+					You wonder if the previous owners met the same fate as your family.
+					As you knew where to go, you have manged to approach unseen. There is a single bandit outside next to the fire 
+					facing away from you. Flickering candlelight signals the others are inside the run-down cottage. Do you...
+				</p>
+
+			</div>
+		
+			<ul class="optionsCont">
+				<li><a href="bandit1Conclusion.html">Now is your chance! Charge the lone bandit by the fire and send him to hell.</a></li>
+				<li><a href="bandit1Conclusion.html">Try to sneak up on the lone bandit and finish him from behind.</a></li>
+				<li><a href="bandit1Conclusion.html">Go straight for the bandit leader in the run-down cottage.</a></li>
+				<li><a href="runAway.html">Give up and run away</a></li>
+				<li><a id="classChoice" href="bandit1Conclusion.html">This is an option to do stuff</a></li>
+		 
+			<script>
+				if(name=='scribe')
+					{
+						document.getElementById('classChoice').innerHTML="Suspect you would be detected. Change position and sneak up on the bandit.";
+						document.getElementById('classChoice').href="bandit1SConc.html";
+						
+					}
+					else if(name=='knight')
+					{
+						document.getElementById('classChoice').innerHTML="Use your superior skill at arms to dispatch the lone bandit.";
+					}
+					else
+					{
+						document.getElementById('classChoice').innerHTML="Let out your fiercest battle cry and charge the unsuspecting fool.";
+					}
+					
+			</script>	
+		</div>
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+		
+	
+fetchIcon(name);
+
+
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<meta  charset="UTF -8" />
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+
+	<h2 id="locationTitle">Searching the forrest</h2>
+</head>
+<body>
+
+	<div class="storyBox">
+		<img id="picture"img src="forrest.jpg"></img>
+
+		<div class="storyText">
+			<p style="font-size:20px;">
+				You trudge and falter through the forest in search of the bandit’s lair. 
+				You are aware wasting precious time and energy in your efforts, and you wish 
+				you had a more precise location to work with. Eventually you smell smoke 
+				and hear a fire and stumble on what you think is the bandits camp, 
+				unfortunately, you made a lot of noise on your approach and you hear 
+				a loud voice shout “who goes there!” Will you…
+			</p>
+
+		</div>
+		
+		<ul class="optionsCont">
+			<li><a href="bandit1NoKnow.html">Emerge from the trees and face him.</a></li>
+			<li><a href="village.html">Return to the village.</a></li>	
+			<li><a href="runAway.html">Run away.</a></li>
+	</div>			
+	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+		classChoice2.style.color = colour;
+	
+		const img = document.createElement("img");
+		img.src = fetchIcon(name);
+
+		document.body.appendChild(img);
+		img.style.position = "absolute";
+		img.style.left = "130px";
+		img.style.top = "110px";
+		img.style.width = "150px";
+		img.style.height = "150px";
+
+</script>	

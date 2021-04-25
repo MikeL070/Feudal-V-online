@@ -1,0 +1,73 @@
+
+
+body
+  {
+    background-color: #4b4b4b;
+  }
+h2
+  {
+    font-family: 'MedievalSharp-Book';
+    font-size: 35px;
+    text-align: center;
+    background-image:;
+    text-decoration: underline;
+    text-shadow: 2px 2px black
+  }
+  a
+  {
+    color: white;
+  }
+
+.storyBox
+  {
+    
+    flex:flow;
+    margin:auto;
+    height: 600px;
+    width: 800px;
+    border-style: groove;
+	
+	background-image:url("burnedFarm.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+	
+	
+  }
+
+  
+.storyText
+  {
+	  
+  color: white ;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'MedievalSharp-Book';
+  font-size: 26px;
+  
+  
+  }
+.optionsCont
+  {
+    align-items: left;
+    padding: 10px;
+    margin:10px;
+    font-family: 'MedievalSharp-Book';
+    font-size: 25px;
+    display: flex;
+    flex-flow: column;
+   	margin-top:80px;
+		
+  }
+#opt
+  {
+	margin-top:10px;
+	margin-bottom:10px;	
+  }
+
+#classChoice
+{
+
+  margin-top:10px; 
+  font-style: italic;
+}

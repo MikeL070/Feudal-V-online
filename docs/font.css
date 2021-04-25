@@ -1,0 +1,9 @@
+@font-face
+{
+  font-family: 'MedievalSharp-Book';
+  src:url('MedievalSharp-Book.tff')format('truetype'),
+      url('MedievalSharp-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  color: red
+}

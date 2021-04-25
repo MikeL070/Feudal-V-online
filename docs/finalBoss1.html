@@ -1,0 +1,45 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">The Bandit Leader</h2>
+</head>
+<body>
+	<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p id="story1">
+					Now it is just you and the bandit leader, the architect of your misery. 
+					He is enraged. He is approaching you with his sword held high and he is 
+					already almost upon you.  You can try and deflect his attack or 
+					lunge at him yourself. Will you…
+				</p>
+				
+			</div>
+			<ul class="optionsCont">
+				<li><a href="finalBossDef.html">Defend his attack</a></li>
+				<li><a href="finalBossAtt.html">Return his attack with one of your own</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+				
+				
+	</div>	
+	
+</body>
+</html>
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	fetchIcon(name);
+	
+</script>	

@@ -1,0 +1,40 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">Finish It</h2>
+</head>
+<body>
+<div class="storyBox">
+			<img id="picture"img src="twoBandits.jpg"></img>
+
+			<div class="storyText">
+				<p style="font-size:30px;" id="story1">
+					The bandit leader is on his knees. Helpless. Now you can complete your revenge. End his life or flee. Will you…
+				</p>
+				
+	
+			</div>
+			<ul class="optionsCont">
+				<li><a href="winPage.html">Finish him off</a></li>
+				<li><a href="runAway.html">Run away</a></li>
+</body>
+</html>	
+
+<script>
+	var name= sessionStorage.getItem('name')
+	
+	var colour= fetchColour(name);
+		
+	locationTitle.style.color = colour;
+	
+	
+	
+	fetchIcon(name);
+	
+</script>	

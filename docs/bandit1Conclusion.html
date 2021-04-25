@@ -1,0 +1,90 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<link rel="stylesheet" href="font.css" type="text/css">
+	<link rel="stylesheet" href="genericPage.css">
+	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+
+	<h2 id="locationTitle">Outside The Bandit Lair</h2>
+</head>
+<body>
+
+		<div style="height:700px;"class="storyBox">
+			<img id="picture"img src="firstBandit.jpg"></img>
+
+			<div class="storyText">
+				<p style="font-size:20px;" id='scribeReplace'>
+					You charge the bandit by the fire. Having become aware of you, he stands ready, weapon in hand, but you see a look of fear in his eyes.
+				</p>
+				<p style="font-size:20px;" id="weapTrain">
+					You clumsily stab him repeatedly with the pointy end of your pitch fork. 
+					He falls to the ground, your frenzied rage was his demise. 
+					You feel a pain in your side and notice a dagger in your ribs; you remove it and blood flows from the wound.
+				</p>
+				<p style="font-size:22px;">
+					The first bandit is dead but you hear a stirring from the cottage and the remaining 2 brigands are coming to face you, ready for battle.
+				</p>
+				</div>
+				<ul class="optionsCont">
+					<li><a href="bandit2.html">Stand your ground</a></li>
+					<li><a href="runAway.html">Run away</a></li>
+					
+
+		</div>	
+				
+			<script>
+				var weaponStatus = sessionStorage.getItem('weapon');
+				var trainStatus = sessionStorage.getItem('training');
+				
+				if(name !== 'scribe')
+				{
+					if(weaponStatus=='yes' && trainStatus=='no')
+					{
+						document.getElementById('weapTrain').innerHTML="You swing at him with your new sword and managed to hack him down clumsily. He eventually falls dead, covered in blood but you feel a pain in your side and notice a dagger in your ribs; you remove it and blood flows from the wound.";
+						setTimeout(reduceHp,3000,20); 
+						setTimeout(deadCheck,4000,);
+					}
+					else if(weaponStatus=='yes' && trainStatus=='yes')
+					{
+						document.getElementById('weapTrain').innerHTML="With one swift swing of your new sword, you remove his head from his shoulders. Blood squirts form the bloody trunk that used to be his chin.";
+					}
+					else
+					{
+						setTimeout(reduceHp,3000,20); 
+						setTimeout(deadCheck,4000,);
+					}
+				}
+				else
+				{
+					document.getElementById('scribeReplace').innerHTML="Well done. you stelthily killed the first bandit";
+					document.getElementById('scribeReplace').style.fontSize='30px';
+					document.getElementById('weapTrain').innerHTML="You feel lucky you did not take any damage";
+					document.getElementById('weapTrain').style.fontSize='30px';					
+				}
+				
+			</script>	
+				
+
+
+
+				
+<script>
+
+		var name= sessionStorage.getItem('name')
+		var colour= fetchColour(name);
+		
+		locationTitle.style.color = colour;
+		classChoice.style.color = colour;
+			
+		fetchIcon(name);
+		
+		if(name=='scribe')
+		{
+			document.getElementById('knowLocation').href="bandit1.html";
+			
+		}	
+
+</script>
+
