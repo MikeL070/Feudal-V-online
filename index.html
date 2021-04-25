@@ -1,7 +1,70 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="font.css" type="text/css">
+    <script src="silverHpFunctions.js"></script>
+    <meta  charset="UTF -8" />
+    <h1>Feudal Vengeance</h1>
+    <h2>A Medieval Revenge Adventure</h2>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<audio id="my_audio" autoplay="autoplay" loop controls>
+    <source src="Gothic.mp3" type="audio/mpeg">
+    Your  browser  does  not  support  the  audio  element.
+</audio>
+<button onclick="toggle_loop()" type="button">Toggle looping</button>
+<button onclick="toggle_mute()" type="button">Mute</button>
+<script>
+        var ao = document.getElementById("my_audio");
+
+        function toggle_loop()
+        {
+          if(ao.loop) {ao.loop = false; }
+          else { ao.loop = true; }
+          ao.load();
+        }
+
+        function toggle_mute()
+        {
+          if(ao.muted)
+          {
+            ao.muted=false;
+          }
+          else {
+            ao.muted=true;
+
+          }
+        }
+      </script>
+
+<ul class="menuOptions">
+    <li class="menuClick"><a href="charClassChoice.html">Start Game</a></li>
+
 </body>
+<style>
+  body{background-color: #4b4b4b;background-image: url('titlePic.jpg'); background-repeat: no-repeat; background-position: top;}
+  a{color: red;text-shadow: 1px 1px black}
+
+  h1{font-family: 'MedievalSharp-Book'; font-size: 80px; text-align: center; color:  #ff0000;text-decoration: underline; text-shadow: 3px 3px black}
+  h2{font-family: 'MedievalSharp-Book'; font-size: 35px; text-align: center; color:  black;text-decoration: underline; text-shadow: 2px 2px black}
+  .menuOptions
+  {
+    font-family: 'MedievalSharp-Book';
+    font-size: 30px;
+    text-align: center;
+    color: red;
+
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+  }
+  .menuClick
+  {
+    padding: 5px;
+    width: 300px;
+    height: 100px;
+    margin-top: 300px;
+  }
+</style>
 </html>
